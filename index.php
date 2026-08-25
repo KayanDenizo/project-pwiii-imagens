@@ -15,7 +15,7 @@
             <label for="nome">Nome do Produto</label>
             <input type="text" name="nome" id="nome" class="sombra">
 
-            <label for="des">Descrição</label>
+            <label for="desc">Descrição</label>
             <textarea name="desc" id="desc" class="sombra"></textarea>
 
             <label for="val">Valor</label>
