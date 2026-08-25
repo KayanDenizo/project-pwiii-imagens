@@ -1,3 +1,9 @@
+<?php
+require 'classes/Produto.class.php';
+$p = new Produto();
+$p->conecta();
+$produtos = $p->buscarProdutos();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,12 +41,14 @@
 </head>
 <body>
 	<section>
-		<a href="exibir_produto.php">
-			<div>
-				<img src="imagens/295d5e781ffd2f97a73d47468c7c1775.jpg">
-				<h2>Calça Jeans</h2>
-			</div>
-		</a>
+		<?php foreach ($produtos as $produto): ?>
+			<a href="exibir_produto.php?id=<?php echo $produto['id_produto']; ?>">
+				<div>
+					<img src="imagens/<?php echo $produto['capa']; ?>">
+					<h2><?php echo $produto['nome_produto']; ?></h2>
+				</div>
+			</a>
+		<?php endforeach; ?>
 	</section>
 </body>
 </html>

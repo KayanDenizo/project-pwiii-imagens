@@ -1,11 +1,11 @@
-CREATE DATABASE IF NOT EXISTS imagem_db;
-USE imagem_db;
+CREATE DATABASE IF NOT EXISTS loja_etim;
+USE loja_etim;
 
 CREATE TABLE produtos(
     id_produto int AUTO_INCREMENT PRIMARY KEY,
     nome_produto varchar(100),
-    preco_produto decimal(5,2),
-    descricao text 
+    descricao text,
+    valor decimal(10,2)
 );
 
 CREATE TABLE imagens(
